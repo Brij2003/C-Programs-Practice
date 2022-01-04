@@ -4,7 +4,8 @@
 
 void swap(int *a, int *b)
 {
-    int temp = *a;    *a = *b;
+    int temp = *a;
+    *a = *b;
     *b = temp;
 }
 int partition(int array[], int lower_bound, int upper_bound)
@@ -69,6 +70,6 @@ int main()
         cpu_time_used = ((end - start)) / CLOCKS_PER_SEC;
         avg = (avg + cpu_time_used) / Itr;
     }
-    printf("\nTime taken %f of %d Iteration", avg, Itr);
+    printf("\nAverage Time taken is %fs for %d number of Iteration", avg, Itr);
     return 0;
 }
