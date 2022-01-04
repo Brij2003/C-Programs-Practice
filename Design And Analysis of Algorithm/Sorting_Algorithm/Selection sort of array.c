@@ -1,9 +1,6 @@
 #include <stdio.h>
-#include <stdlib.h>
-#define MAX 100
-int arr[MAX];
 
-int sort(int n)
+int sort(int arr[], int n)
 {
     int temp, i, j, r;
     int count = 0;
@@ -40,7 +37,6 @@ int sort(int n)
         }
         n--;
     }
-
     for (i = 0; arr[i] != '\0'; i++)
     {
         printf("%d ", arr[i]);
@@ -49,14 +45,8 @@ int sort(int n)
 }
 void main()
 {
-    int i, a;
-    printf("\nPlease enter the Array size: ");
-    scanf("%d", &a);
-    printf("\nEnter the Array to be sorted\n");
-    for(i = 0; i < a; i++)
-    {
-        printf("\nEnter the element %d: ", i + 1);
-        scanf("%d", &arr[i]);
-    }
-    sort(a);
+    int i;
+    int a = 6;
+    int arr[] = {5, 1, 8, 4, 10, 1};
+    sort(arr,a);
 }
