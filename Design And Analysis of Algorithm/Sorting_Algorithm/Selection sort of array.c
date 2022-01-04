@@ -2,9 +2,9 @@
 
 int sort(int arr[], int n)
 {
-    int temp, i, j, r;
+    int temp, i;
     int count = 0;
-    j = 0;
+    int j = 0;
     while(j < n)
     {
         temp = arr[j];
@@ -37,16 +37,19 @@ int sort(int arr[], int n)
         }
         n--;
     }
-    for (i = 0; arr[i] != '\0'; i++)
+    printf("\nTotal no of minimum swap are %d\n", count);
+}
+void print(int arr[], int n)
+{
+    for (int i = 0; i < n; i++)
     {
         printf("%d ", arr[i]);
     }
-    printf("\nTotal no of minimum swap are %d", count);
 }
 void main()
 {
-    int i;
     int a = 6;
     int arr[] = {5, 1, 8, 4, 10, 1};
     sort(arr,a);
+    print(arr, a);
 }
