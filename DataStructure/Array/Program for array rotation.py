@@ -11,10 +11,32 @@ def rotateArray(a):
         i += 1
     a[len(a) - 1] = temp
     
+'''function rotate(arr[], d, n) that rotates arr[] of size n by d elements.'''
+def reverseArray(a,start,end):
+    while(start < end):
+        temp = a[start]
+        a[start] = a[end]
+        a[end] = temp
+        start += 1
+        end -= 1
+        
+def rotateArray2(a,d):
+    if(d == 0):
+        return a
+    
+    n = len(a)
+    reverseArray(a,0,d - 1) 
+    reverseArray(a,d,n - 1) 
+    reverseArray(a,0,n - 1)
+    
+
 n = [1,2,3,4,5,6,7]
-rotateArray(n)
-rotateArray(n)
-rotateArray(n)
-rotateArray(n)
+# rotateArray(n)
+# rotateArray(n)
+# rotateArray(n)
+# rotateArray(n)
+d = 4
+rotateArray2(n,d)
 print(n)
+    
     
