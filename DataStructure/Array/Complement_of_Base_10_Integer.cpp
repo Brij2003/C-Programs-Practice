@@ -1,0 +1,32 @@
+/*The complement of an integer is the integer you get when you flip all the 0's to 1's and all the 1's to 0's in its binary representation.
+
+For example, The integer 5 is "101" in binary and its complement is "010" which is the integer 2.
+Given an integer n, return its complement.*/
+
+#include <iostream>
+using namespace std;
+
+class Solution
+{
+    public:
+    int bitwiseComplement(int n)
+    {
+        int base = 1;
+        int number = 0;
+        while (n)
+        {
+            number += ((1 - (n % 2)) * base);
+            n /= 2;
+            base *= 2;
+        }
+        cout<< number;
+    }
+};
+
+int main(){
+    int n = 0;
+    Solution s1;
+    s1.bitwiseComplement(n);
+    return 0;
+}
+
