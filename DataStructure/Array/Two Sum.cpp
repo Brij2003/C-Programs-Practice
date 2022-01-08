@@ -55,8 +55,7 @@ class Solution{
 };
 
 int main(){
-    vector<int> a;
-    vector<int> b;
+    vector<int> a, b;
     a = {3, 2, 4};
     Solution s;
     b = s.twoSum(a,6);
